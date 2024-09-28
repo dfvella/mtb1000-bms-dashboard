@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MTB1000 BMS Dashboard</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Connection:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="connectionLabel">
+          <property name="text">
+           <string>Disconnected</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_20">
+        <item>
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>State:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="stateLabel">
+          <property name="text">
+           <string>OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_29">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>CPU utilization:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="cpuLabel">
+          <property name="text">
+           <string>0%</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_23">
+        <item>
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Fault:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="faultLabel">
+          <property name="text">
+           <string>None</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_19">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Soc:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="socLabel">
+          <property name="text">
+           <string>0%</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_18">
+        <item>
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Capacity:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="capacityLabel">
+          <property name="text">
+           <string>0Ah</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_43">
+        <item>
+         <widget class="QLabel" name="label_28">
+          <property name="text">
+           <string>Pack Voltage:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="packVoltageLabel">
+          <property name="text">
+           <string>0V</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_44">
+        <item>
+         <widget class="QLabel" name="label_31">
+          <property name="text">
+           <string>Pack Current:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="packCurrentLabel">
+          <property name="text">
+           <string>0A</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_45">
+        <item>
+         <widget class="QLabel" name="label_32">
+          <property name="text">
+           <string>Pack Power:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="packPowerLabel">
+          <property name="text">
+           <string>0W</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_21">
+        <item>
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Average Cell Voltage:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="avgCellLabel">
+          <property name="text">
+           <string>0V</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_22">
+        <item>
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>Max Cell Voltage:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_12">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="maxCellLabel">
+          <property name="text">
+           <string>0V</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Min Cell Voltage:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="minCellLabel">
+          <property name="text">
+           <string>0V</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_28">
+        <item>
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Thermistor 1:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_14">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="thermistor1Label">
+          <property name="text">
+           <string>0C</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_27">
+        <item>
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>Thermistor 2:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="thermistor2Label">
+          <property name="text">
+           <string>0C</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_26">
+        <item>
+         <widget class="QLabel" name="label_26">
+          <property name="text">
+           <string>Thermistor 3:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_16">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="thermistor3Label">
+          <property name="text">
+           <string>0C</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_25">
+        <item>
+         <widget class="QLabel" name="label_27">
+          <property name="text">
+           <string>Precharge FET:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_17">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="prechargeFetLabel">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_42">
+        <item>
+         <widget class="QLabel" name="label_29">
+          <property name="text">
+           <string>Discharge FET:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_18">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="dischargeFetLabel">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_24">
+        <item>
+         <widget class="QLabel" name="label_30">
+          <property name="text">
+           <string>Charge FET:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_19">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="chargeFetLabel">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_33">
+        <property name="text">
+         <string>Voltage</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Cell 1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc1">
+          <property name="smallDecimalPoint">
+           <bool>false</bool>
+          </property>
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Cell 2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc2">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Cell 3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc3">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Cell 4</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc4">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Cell 5</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc5">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Cell 6</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc6">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>Cell 7</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc7">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Cell 8</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc8">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <item>
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Cell 9</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc9">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Cell 10</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc10">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Cell 11</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc11">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Cell 12</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc12">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Cell 13</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="vc13">
+          <property name="digitCount">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_34">
+        <property name="text">
+         <string>Balance</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="cb1">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_32">
+        <item>
+         <widget class="QLabel" name="cb2">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_41">
+        <item>
+         <widget class="QLabel" name="cb3">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_40">
+        <item>
+         <widget class="QLabel" name="cb4">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_39">
+        <item>
+         <widget class="QLabel" name="cb5">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_38">
+        <item>
+         <widget class="QLabel" name="cb6">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_37">
+        <item>
+         <widget class="QLabel" name="cb7">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_36">
+        <item>
+         <widget class="QLabel" name="cb8">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_35">
+        <item>
+         <widget class="QLabel" name="cb9">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_34">
+        <item>
+         <widget class="QLabel" name="cb10">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_33">
+        <item>
+         <widget class="QLabel" name="cb11">
+          <property name="text">
+           <string>FET-OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_31">
+        <item>
+         <widget class="QLabel" name="cb12">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_30">
+        <item>
+         <widget class="QLabel" name="cb13">
+          <property name="text">
+           <string>FET_OFF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>526</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
