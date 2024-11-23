@@ -77,6 +77,7 @@ class Decoder:
         return False
 
     def read_serial(self, size):
+        return self.ser.read(size)
         if len(self.serial_buffer) - self.serial_buffer_idx < 60:
             self.serial_buffer = b''.join([self.serial_buffer[self.serial_buffer_idx:], self.ser.read(256)])
             self.serial_buffer_idx = 0

@@ -89,7 +89,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.decoder = Decoder()
 
         self.timer = QtCore.QTimer()
-        self.timer.setInterval(500)
+        self.timer.setInterval(100)
         self.timer.timeout.connect(self.update_task)
         self.timer.start()
 
@@ -112,7 +112,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.capacityLabel.setText(f" {(self.decoder.capacity / 3600000):.3f}Ah ")
         self.packVoltageLabel.setText(f" {(self.decoder.pack_voltage / 1000):.3f}V ")
         self.packCurrentLabel.setText(f" {(self.decoder.pack_current / 1000):.3f}A ")
-        self.packPowerLabel.setText(f" {((self.decoder.pack_current + self.decoder.pack_voltage) / 1000000):.3f}W ")
+        self.packPowerLabel.setText(f" {((self.decoder.pack_current * self.decoder.pack_voltage) / 1000000):.3f}W ")
         self.avgCellLabel.setText(f" {((sum(self.decoder.volt) / len(self.decoder.volt) / 1000)):.3f}V ")
         self.maxCellLabel.setText(f" {(max(self.decoder.volt) / 1000):.3f}V ")
         self.minCellLabel.setText(f" {(min(self.decoder.volt) / 1000):.3f}V ")
@@ -123,5 +123,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.dischargeFetLabel.setText(" FET_ON " if self.decoder.discharge else " FET_OFF ")
         self.chargeFetLabel.setText(" FET_ON " if self.decoder.charge else " FET_OFF ")
         for i in range(13):
+            if self.decoder.volt[i] % 10 == 0:
+                self.decoder.volt[i] += 1
             self.cellVoltageLabels[i].display(self.decoder.volt[i] / 1000)
             self.cellBalanceLabels[i].setText(" FET_ON " if self.decoder.balance[i] else " FET_OFF ")
